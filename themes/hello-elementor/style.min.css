@@ -28,3 +28,55 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}*,:after,:before{box-sizing:
 .zt-half-bg::before {
     height: 50%;
 }
+
+.bdt-panel-slider .bdt-panel-slide-thumb {
+	background-image: none !important;
+	background: linear-gradient(0deg, rgba(154, 168, 200, 0.1), rgba(154, 168, 200, 0.1)),
+radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 55.52%, rgba(255, 255, 255, 0.05) 60%, rgba(255, 255, 255, 0.05) 76.5%, rgba(255, 255, 255, 0.05) 87.5%, rgba(255, 255, 255, 0.05) 92.5%) !important;
+	border: 1px solid #9AA8C866;
+	border-radius: 20px;
+}
+
+.bdt-panel-slide-item h3 {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 28.8px;
+	color: #002068 !important;
+}
+
+.bdt-panel-slide-item p {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21.6px;
+}
+
+.swiper-pagination-bullet {
+	background-color: transparent !important;
+}
+
+.swiper-pagination-bullet-active {
+	border: 1px solid var( --e-global-color-secondary );
+}
+
+[class*="elementor-widget-bdt-"] .bdt-dots-container .swiper-pagination .swiper-pagination-bullet {
+	width: 24px !important;
+	height: 24px !important;
+}
+
+.swiper-pagination-bullet::before {
+	content: '';
+	background: var( --e-global-color-secondary );
+	display: block;
+    width: calc(100% + -10px);
+    height: calc(100% + -10px);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+	border-radius: 100%;
+}
+
+.zt-shadow-text h2 {
+	text-shadow: 0px 4px 4px #00000040;
+}
+
