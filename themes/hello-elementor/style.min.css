@@ -146,14 +146,19 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 	background: none;
 }
 
-.wpcf7-checkbox label {
+.zt-politics label{
 	display: flex !important;
 	margin: 20px 0;
     display: block;
 }
 
-.wpcf7-checkbox input[type="checkbox"] {
+.zt-politics input[type="checkbox"] {
 	width: 60px;
     height: 46px;
     margin-right: 20px;
+}
+
+.zt-politics a {
+	color: #FFD078;
+	text-decoration: none !important;
 }
