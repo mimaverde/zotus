@@ -61,6 +61,79 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 	border-radius: 20px;
 }
 
+.bdt-panel-slider .bdt-panel-slide-link {
+	font-family: "Bricolage Grotesque", Sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--e-global-color-text);
+    background-color: var( --e-global-color-secondary );
+    border-radius: 100px 100px 100px 100px;
+    padding: 12px 32px 12px 32px;
+	box-shadow: 4px 4px 16px 0px #FFD07833;
+	position: absolute;
+    bottom: -22px;
+    left: 50%;
+    transform: translateX(-50%) skew(-0deg) !important;
+    width: max-content;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s ease;
+}
+
+.bdt-panel-slide-desc:hover .bdt-panel-slide-link{
+	transition: all 0.3s ease;
+	opacity: 1;
+	visibility: visible;
+}
+
+@media screen and (max-width: 767px) {
+	.bdt-panel-slider .bdt-panel-slide-link {
+		transition: all 0.3s ease;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.bdt-panel-slide-item {
+	border: 1px solid transparent;
+	border-radius: 20px;
+	box-sizing: content-box;
+}
+
+.bdt-panel-slide-item:hover {
+	background: var( --e-global-color-primary );
+	border-color: var( --e-global-color-secondary );
+	box-sizing: 
+	border-radius: 20px;
+	transition: all 0.3s ease;
+}
+
+.bdt-panel-slide-item:hover h3 {
+	color: var( --e-global-color-secondary ) !important;
+	transition: all 0.3s ease;
+}
+
+.bdt-panel-slide-item:hover p {
+	color: white;
+	transition: all 0.3s ease;
+}
+
+[class*="elementor-widget-bdt-"] .swiper-slide {
+	overflow: visible !important;
+}
+
+.swiper-wrapper {
+    padding-bottom: 25px;
+}
+
+
+
+
+
+
+
+
+
 .bdt-panel-slide-item h3 {
 	font-size: 24px;
 	font-weight: 700;
@@ -100,6 +173,7 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 	border-radius: 100%;
 }
 
+
 /* Form contact */
 
 .zt-form .elementor-widget-container {
@@ -132,6 +206,7 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 }
 
 .wpcf7 select {
+	color: var( --e-global-color-accent );
 	background-color: var( --e-global-color-secondary );
 	-moz-appearance: none;
 	-webkit-appearance: none;
@@ -146,19 +221,84 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 	background: none;
 }
 
-.zt-politics label{
-	display: flex !important;
-	margin: 20px 0;
-    display: block;
+.zt-politics .wpcf7-list-item-label {
+	display: flex;
+	justify-content: flex-end;
+    gap: 6px;
 }
 
-.zt-politics input[type="checkbox"] {
-	width: 60px;
-    height: 46px;
-    margin-right: 20px;
+.zt-politics {
+	margin-top: 20px;
 }
 
 .zt-politics a {
 	color: #FFD078;
 	text-decoration: none !important;
+}
+
+.zt-politics .wpcf7-list-item-label span {
+    padding-left: 30px;
+}
+
+/* Hide the default checkbox */
+.zt-politics input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkbox style */
+.zt-politics input[type="checkbox"] + .wpcf7-list-item-label::before {
+    content: '';
+	position: absolute;
+    left: 0;
+    top: calc(50% - 10px);
+    margin: 3px;
+	box-sizing: content-box;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var( --e-global-color-primary );
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Checkbox checked state */
+.zt-politics input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
+    background-color: var( --e-global-color-secondary );
+    border: 4px solid var(--e-global-color-text);
+	margin: 0;
+    content: '';
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    line-height: 18px;
+	transition: all 0.3s ease;
+	background-image: url('/wp-content/uploads/2024/12/icon-check.png');
+	background-repeat: no-repeat;
+    background-size: 19px;
+    background-position: center;
+}
+
+/* Hover effect */
+.zt-politics input[type="checkbox"] + .wpcf7-list-item-label:hover::before {
+	margin: 0;
+    border: 4px solid #f0f2f6;
+	transition: all 0.3s ease;
+}
+
+/* Animations and effects  */
+zt-hover-icon .elementor-button-content-wrapper .elementor-button-icon {
+	transition: all 0.3s ease;
+	margin-left: 0;
+}
+.zt-hover-icon .elementor-button-content-wrapper:hover .elementor-button-icon {
+	transition: all 0.3s ease;
+	margin-left: 4px;
+}
+
+.zt-hover-icon .elementor-button-content-wrapper:hover .elementor-button-text{
+	transition: all 0.3s ease;
+	text-decoration: underline;
 }
