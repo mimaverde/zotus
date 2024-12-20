@@ -6,12 +6,27 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}*,:after,:before{box-sizing:
     color: var( --e-global-color-primary );
 }
 
+header#masthead {
+	position: sticky !important;
+  	top: 0;
+}
+
+body.admin-bar header#masthead {
+  top: calc(32px + 0px);
+}
+
 .page-header .entry-title {
 	display: none !important;
 }
 
 .zt-navigation li.elementor-button-wrapper {
-	padding-left: clamp(1rem, 6vw, 6rem);
+	padding-left: clamp(2rem, 6vw, 6rem);
+}
+
+@media screen and (max-width: 1064px) {
+	.zt-navigation li.elementor-button-wrapper {
+		padding-left: 2rem;
+	}
 }
 
 .zt-gradient {
@@ -88,7 +103,6 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 
 @media screen and (max-width: 767px) {
 	.bdt-panel-slider .bdt-panel-slide-link {
-		transition: all 0.3s ease;
 		opacity: 1;
 		visibility: visible;
 	}
@@ -105,17 +119,17 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 	border-color: var( --e-global-color-secondary );
 	box-sizing: 
 	border-radius: 20px;
-	transition: all 0.3s ease;
+	transition: all 0.6s ease;
 }
 
 .bdt-panel-slide-item:hover h3 {
 	color: var( --e-global-color-secondary ) !important;
-	transition: all 0.3s ease;
+	transition: all 0.6s ease;
 }
 
 .bdt-panel-slide-item:hover p {
 	color: white;
-	transition: all 0.3s ease;
+	transition: all 0.6s ease;
 }
 
 [class*="elementor-widget-bdt-"] .swiper-slide {
@@ -289,10 +303,11 @@ radial-gradient(157.75% 86.12% at 18.89% 18.62%, rgba(255, 128, 0, 0.05) 0%, rgb
 }
 
 /* Animations and effects  */
-zt-hover-icon .elementor-button-content-wrapper .elementor-button-icon {
+.zt-hover-icon .elementor-button-content-wrapper .elementor-button-icon {
 	transition: all 0.3s ease;
 	margin-left: 0;
 }
+
 .zt-hover-icon .elementor-button-content-wrapper:hover .elementor-button-icon {
 	transition: all 0.3s ease;
 	margin-left: 4px;
@@ -301,4 +316,19 @@ zt-hover-icon .elementor-button-content-wrapper .elementor-button-icon {
 .zt-hover-icon .elementor-button-content-wrapper:hover .elementor-button-text{
 	transition: all 0.3s ease;
 	text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+	.hfe-scroll-to-top-wrap .hfe-scroll-to-top-button {
+		bottom: 80px;
+		right: 20px;
+		height: 50px;
+		width: 50px;
+	}
+}
+
+@media screen and (max-width: 1400px) {
+	.hfe-scroll-to-top-wrap .hfe-scroll-to-top-button {
+		right: 40px;
+	}
 }
